@@ -23,6 +23,10 @@ export class BindPage {
     console.log('ionViewDidLoad BindPage');
   }
 
+  ionViewDidLeave() {
+    console.log('ionviewDidLeave BindPage');
+  }
+
   goBack() {
     this.navCtrl.pop();
   }

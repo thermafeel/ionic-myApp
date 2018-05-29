@@ -30,6 +30,10 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
+  ionViewDidLeave() {
+    console.log('ionviewDidLeave HomePage');
+  }
+
   itemClicked(item) {
     alert(item.name);
   }
