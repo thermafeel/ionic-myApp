@@ -1,14 +1,31 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Welcome IONIC!!
-    </ion-title>
+    <ion-title>home</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h2> 이 페이지는 Home Page입니다.</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="itemClicked(item)">
+      {{item.id}} : {{item.name}}
+    </ion-item>
+  </ion-list>
+  <button ion-button full [disabled]="disabledSwitch"
+                (click)="buttonClicked($event)" value="아이오닉">MyButton</button>
+
+  <ion-item>
+    <ion-label>UserName :</ion-label>
+    <ion-input type="text" [(ngModel)]="userName"></ion-input>
+  </ion-item>
+  입력한 UserName 변수의 값 : {{userName}}
 </ion-content>
